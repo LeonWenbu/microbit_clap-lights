@@ -1,6 +1,5 @@
-input.onSound(DetectedSound.Loud, function on_sound_loud() {
-    
-    lightsOn = !lightsOn
+input.onSound(DetectedSound.Loud, function () {
+    lightsOn = !(lightsOn)
     if (lightsOn) {
         basic.showLeds(`
             . # . # .
@@ -12,7 +11,6 @@ input.onSound(DetectedSound.Loud, function on_sound_loud() {
     } else {
         basic.clearScreen()
     }
-    
 })
 let lightsOn = false
 input.setSoundThreshold(SoundThreshold.Loud, 100)
